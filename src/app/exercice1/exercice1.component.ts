@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 
 @Component({
   selector: 'app-exercice1',
@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class Exercice1Component implements OnInit {
   public result: number = 0;
 
-  constructor() {}
-
   ngOnInit() {}
+
+  miseaAjourResult(event: { result: number }) {
+    this.result = event.result;
+    console.log(event.result);
+    
+  }
 }
